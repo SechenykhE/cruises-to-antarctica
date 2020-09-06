@@ -1,0 +1,147 @@
+.header {
+  min-height: 650px;
+  padding-top: 35px;
+
+  background-color: $background-image-color;
+  background-image: url("../../img/header-desktop@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../../img/header-desktop@2x.jpg");
+  }
+}
+
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  align-self: start;
+  flex-shrink: 0;
+
+  width: 70px;
+  height: 38px;
+
+  &--dark {
+    display: none;
+  }
+}
+
+.header__main {
+  padding: 192px 95px;
+
+  color: $second-color;
+}
+
+.header__main h1,
+.header__main p {
+  @include reset;
+
+  margin-bottom: 12px;
+}
+
+.header__main h1 {
+  @include text(54px, 1.22, 700);
+}
+
+.header__main p {
+  @include text(20px, 1.2, 400);
+}
+
+.header__main br {
+  display: none;
+}
+
+@media (max-width: $tablet-width-max) {
+  .header {
+    min-height: 638px;
+    padding-top: 30px;
+
+    background-image: url("../../img/header-tablet@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../../img/header-tablet@2x.jpg");
+    }
+  }
+
+  .header__logo,
+  .header__logo img {
+    width: 38px;
+    height: 20px;
+  }
+
+  .header__main {
+    padding: 211px 0;
+  }
+
+  .header__main h1,
+  .header__main p {
+    margin-bottom: 13px;
+  }
+
+  .header__main h1 {
+    @include text(50px, 1.22, 700);
+  }
+
+  .header__main p {
+    @include text(18px, 1.22, 400);
+  }
+}
+
+@media (max-width: $mobile-width-max) {
+  .header {
+    min-height: 500px;
+    padding-top: 20px;
+
+    background-image: url("../../img/header-mobile@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../../img/header-mobile@2x.jpg");
+    }
+  }
+
+  .header__nav {
+    flex-direction: column;
+  }
+
+  .header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .header__logo,
+  .header__logo img {
+    width: 42px;
+    height: 22px;
+  }
+
+  .header__main {
+    position: relative;
+
+    padding: 133px 0;
+  }
+
+  .header__main h1,
+  .header__main p {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 11px;
+  }
+
+  .header__main h1 {
+    @include text(36px, 1.25, 700);
+  }
+
+  .header__main p {
+    @include text(16px, 1.4, 400);
+  }
+
+  .header__main br {
+    display: block;
+  }
+}

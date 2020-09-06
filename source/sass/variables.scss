@@ -2,10 +2,11 @@ $first-color: #011c40;
 $first-color-hover: rgba($first-color, 0.7);
 $first-color-active: rgba($first-color, 0.3);
 $second-color: #f9fbfd;
-$second-color-hover: rgba($first-color, 0.7);
-$second-color-active: rgba($first-color, 0.3);
+$second-color-hover: rgba($second-color, 0.6);
+$second-color-active: rgba($second-color, 0.3);
 $third-color: #d8d8d9;
-$background-color: #e5e5e5;
+$background-color: #f9fbfd;
+$background-image-color: #1a3c75;
 $gradient: linear-gradient(180deg, rgba(1, 28, 64, 0) 50%, #011c40 100%);
 
 $mobile-width-min: 320px;
