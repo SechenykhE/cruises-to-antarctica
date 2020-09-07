@@ -1,34 +1,35 @@
-.travel {
+.travel__wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  padding: 120px 0;
+  padding-top: 120px;
+  padding-bottom: 115px;
 }
 
-.travel__wrapper {
+.travel__text {
   width: 45%;
 }
 
-.travel__wrapper h2,
-.travel__wrapper p {
+.travel__text h2,
+.travel__text p {
   @include reset;
 }
 
-.travel__wrapper h2 {
+.travel__text h2 {
   @include title-desktop;
 
-  margin-top: -5px;
-  margin-bottom: 25px;
+  margin-top: -6px;
+  margin-bottom: 24px;
 }
 
-.travel__wrapper p {
+.travel__text p {
   @include text(16px, 1.5, 400);
 
   color: $first-color;
 }
 
-.travel__wrapper br {
+.travel__text br {
   display: none;
 }
 
@@ -37,47 +38,49 @@
 }
 
 @media (max-width: $tablet-width-max) {
-  .travel {
+  .travel__wrapper {
     padding: 96px 0;
+    padding-bottom: 94px;
   }
 
-  .travel__wrapper {
+  .travel__text {
     width: 48%;
   }
 
-  .travel__wrapper h2 {
+  .travel__text h2 {
     @include title-tablet;
 
     width: 65%;
     margin-bottom: 15px;
   }
 
-  .travel__wrapper br {
+  .travel__text br {
     display: block;
   }
 }
 
 @media (max-width: $mobile-width-max) {
-  .travel {
+  .travel__wrapper {
     flex-direction: column;
-    padding: 62px 0;
+    align-items: flex-start;
+    padding: 63px 0 58px 0;
   }
 
-  .travel__wrapper {
+  .travel__text {
     width: 100%;
   }
 
-  .travel__wrapper h2 {
+  .travel__text h2 {
     @include title-mobile;
 
     width: 72%;
   }
 
-  .travel__wrapper p {
+  .travel__text p {
     margin-bottom: 34px;
   }
 
-  .travel__wrapper br {
+  .travel__text br {
     display: none;
   }
 
