@@ -1,0 +1,146 @@
+.footer {
+  flex-shrink: 0;
+  min-height: 138px;
+  padding: 50px 0;
+
+  background-color: $first-color;
+}
+
+.footer__wrapper,
+.footer__list-nav,
+.footer__list-social {
+  display: flex;
+  align-items: center;
+}
+
+.footer__wrapper {
+  justify-content: space-between;
+}
+
+.footer__list-nav,
+.footer__list-social {
+  flex-wrap: wrap;
+}
+
+.footer__logo {
+  flex-shrink: 0;
+}
+
+.footer__list-nav {
+  @include list-reset;
+
+  justify-content: flex-start;
+  margin-right: auto;
+  margin-left: 7px;
+}
+
+.footer__list-nav li,
+.footer__list-nav a {
+  @include animation;
+  @include text(16px, 1.25, 500);
+
+  color: $second-color;
+
+  &:hover,
+  &:focus {
+    @include animation;
+
+    color: $second-color-hover;
+  }
+
+  &:active {
+    @include animation;
+
+    color: $second-color-active;
+  }
+}
+
+.footer__list-nav li {
+  margin-left: 34px;
+}
+
+.footer__list-nav li,
+.footer__list-social li {
+  margin-top: 6px;
+  margin-bottom: 9px;
+}
+
+.footer__list-social {
+  @include list-reset;
+
+  flex-shrink: 0;
+  width: 150px;
+}
+
+.footer__list-social li {
+  margin-left: 33px;
+}
+
+@media (max-width: $tablet-width-max) {
+  .footer {
+    min-height: 120px;
+  }
+
+  .footer__logo {
+    width: 38px;
+    height: 20px;
+  }
+
+  .footer__list-nav li,
+  .footer__list-nav a {
+    font-size: 12px;
+  }
+
+  .footer__list-nav li {
+    margin-left: 23px;
+  }
+
+  .footer__list-nav li,
+  .footer__list-social li {
+    margin-top: 0;
+    margin-bottom: 2px;
+  }
+
+  .footer__list-social {
+    width: 110px;
+  }
+
+  .footer__list-social li {
+    margin-left: 23px;
+  }
+}
+
+@media (max-width: $mobile-width-max) {
+  .footer {
+    min-height: 283px;
+    padding: 40px 0;
+  }
+
+  .footer__logo {
+    width: 42px;
+    height: 22px;
+    margin-bottom: 30px;
+  }
+
+  .footer__wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer__list-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 0;
+  }
+
+  .footer__list-nav li {
+    margin-bottom: 15px;
+    margin-left: 0;
+  }
+
+  .footer__list-social li {
+    margin-right: 23px;
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+}

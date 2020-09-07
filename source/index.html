@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
+    <div style="display: none;">
+      <include src="build/img/sprite_auto.svg"></include>
+    </div>
+
     <header class="header">
       <div class="container">
         <div class="header__nav header-nav header-nav--closed header-nav--nojs">
@@ -45,6 +49,57 @@
         </div>
       </div>
     </header>
+
+    <main class="main">
+
+    </main>
+
+    <footer class="footer">
+      <div class="footer__wrapper container">
+        <a class="footer__logo">
+          <img src="img/logo.svg" width="70" height="38" alt="Логотип">
+        </a>
+
+        <ul class="footer__list-nav">
+          <li>
+            <a href="#">Преимущества</a>
+          </li>
+          <li>
+            <a href="#">Направления</a>
+          </li>
+          <li>
+            <a href="#">Ближайшие круизы</a>
+          </li>
+          <li>
+            <a href="#">Контакты</a>
+          </li>
+        </ul>
+
+        <ul class="footer__list-social list-social">
+          <li>
+            <a class="list-social__link list-social__link--fb" href="#" aria-label="Фейсбук">
+              <svg width="11" height="20">
+                <use xlink:href="#icon-fb"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a class="list-social__link list-social__link--insta" href="#" aria-label="Инстаграм">
+              <svg width="20" height="20">
+                <use xlink:href="#icon-insta"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a class="list-social__link list-social__link--tw" href="#" aria-label="Твиттер">
+              <svg width="20" height="16">
+                <use xlink:href="#icon-tw"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
 
     <script src="js/script.js"></script>
   </body>

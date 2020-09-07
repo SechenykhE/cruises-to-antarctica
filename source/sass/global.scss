@@ -3,6 +3,9 @@ html {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   width: 100%;
   min-width: $desktop-width-min;
   margin: 0 auto;

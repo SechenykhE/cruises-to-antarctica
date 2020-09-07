@@ -1,0 +1,35 @@
+.list-social__link svg {
+  @include animation;
+
+  fill: $second-color;
+}
+
+.list-social__link:hover svg,
+.list-social__link:focus svg {
+  @include animation;
+
+  fill: $second-color-hover;
+}
+
+.list-social__link:active svg {
+  @include animation;
+
+  fill: $second-color-active;
+}
+
+@media (max-width: $tablet-width-max) {
+  .list-social__link--fb svg {
+    width: 9px;
+    height: 16px;
+  }
+
+  .list-social__link--insta svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .list-social__link--tw svg {
+    width: 16px;
+    height: 13px;
+  }
+}
