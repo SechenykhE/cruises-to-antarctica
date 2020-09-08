@@ -1,0 +1,43 @@
+.cruises {
+  padding-top: 110px;
+  padding-bottom: 91px;
+}
+
+.cruises__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cruises__wrapper h2 {
+  @include reset;
+  @include title-desktop;
+
+  margin-bottom: 49px;
+}
+
+@media (max-width: $tablet-width-max) {
+  .cruises {
+    padding-top: 90px;
+    padding-bottom: 69px;
+  }
+
+  .cruises__wrapper h2 {
+    @include title-tablet;
+
+    margin-bottom: 51px;
+  }
+}
+
+@media (max-width: $mobile-width-max) {
+  .cruises {
+    padding-top: 57px;
+    padding-bottom: 35px;
+  }
+
+  .cruises__wrapper h2 {
+    @include title-mobile;
+
+    margin-bottom: 32px;
+  }
+}

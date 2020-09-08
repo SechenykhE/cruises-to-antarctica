@@ -1,0 +1,40 @@
+.button {
+  @include text(14px, 1.5, 600);
+  @include animation;
+
+  display: block;
+  max-width: 210px;
+  height: 40px;
+  padding: 9px 14px;
+
+  color: $first-color;
+  text-align: center;
+  background-color: $second-color;
+
+  &:hover,
+  &:focus {
+    @include animation;
+
+    color: $first-color-hover;
+    background-color: $second-color-hover;
+  }
+
+  &:active {
+    @include animation;
+
+    color: $first-color-active;
+    background-color: $second-color-active;
+  }
+}
+
+@media (max-width: $tablet-width-max) {
+  .button {
+    max-width: 239px;
+  }
+}
+
+@media (max-width: $mobile-width-max) {
+  .container {
+    padding: 0 4.7%;
+  }
+}
