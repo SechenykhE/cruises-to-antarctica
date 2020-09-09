@@ -427,6 +427,34 @@
           </div>
         </div>
       </section>
+
+      <section class="contacts container">
+        <h2 class="visually-hidden">Контакты</h2>
+        <div class="contacts__wrapper">
+          <div class="contacts__wrapper-img">
+            <picture>
+              <!-- 1x: 290px 2x: 580px -->
+              <source type="image/webp" media="(max-width: 767px)" srcset="img/map-mobile@1x.webp 1x, img/map-mobile@2x.webp 2x">
+              <!-- 1x: 324px 2x: 648px -->
+              <source type="image/webp" media="(max-width: 1023px)" srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x">
+              <!-- 1x: 560px 2x: 1120px -->
+              <source type="image/webp" srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x">
+
+              <!-- 1x: 290px 2x: 580px -->
+              <source media="(max-width: 767px)" srcset="img/map-mobile@1x.jpg 1x, img/map-mobile@2x.jpg 2x">
+              <!-- 1x: 324px 2x: 648px -->
+              <source media="(max-width: 1023px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
+              <!-- 1x: 560px 2x: 1120px -->
+              <img class="contacts__img" src="img/map-desktop@1x.jpg" srcset=" img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x" width="560" height="306" alt="Три пингвина">
+            </picture>
+          </div>
+          <div class="contacts__text">
+            <p class="contacts__text-question">У вас ещё остались вопросы или сомнения? Приезжайте к нам в офис и мы вам все расскажем.</p>
+            <p class="contacts__info contacts__info--adress">г. Санкт Петербург, <br> ул. Большая Конюшенная, 19/8</p>
+            <a class="contacts__info contacts__info--phone" href="tel:88002000000">8-800-200-00-00</a>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="footer">

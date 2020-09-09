@@ -2,6 +2,7 @@
   flex-shrink: 0;
   min-height: 138px;
   padding: 50px 0;
+  padding-bottom: 45px;
 
   background-color: $first-color;
 }
@@ -79,11 +80,17 @@
 @media (max-width: $tablet-width-max) {
   .footer {
     min-height: 120px;
+    padding-top: 48px;
+    padding-bottom: 44px;
   }
 
   .footer__logo {
     width: 38px;
     height: 20px;
+  }
+
+  .footer__list-nav {
+    margin-left: 3px;
   }
 
   .footer__list-nav li,
@@ -114,12 +121,13 @@
   .footer {
     min-height: 283px;
     padding: 40px 0;
+    padding-bottom: 33px;
   }
 
   .footer__logo {
     width: 42px;
     height: 22px;
-    margin-bottom: 30px;
+    margin-bottom: 28px;
   }
 
   .footer__wrapper {
@@ -130,11 +138,12 @@
   .footer__list-nav {
     flex-direction: column;
     align-items: flex-start;
+    margin-bottom: 8px;
     margin-left: 0;
   }
 
   .footer__list-nav li {
-    margin-bottom: 15px;
+    margin-bottom: 17px;
     margin-left: 0;
   }
 

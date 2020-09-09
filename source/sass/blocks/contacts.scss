@@ -1,0 +1,132 @@
+.contacts__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  min-height: 142px;
+  padding-top: 120px;
+  padding-bottom: 113px;
+}
+
+.contacts__text {
+  width: 43%;
+  margin-top: -6px;
+}
+
+.contacts__text p {
+  @include reset;
+}
+
+.contacts__text .contacts__text-question {
+  @include text(18px, 1.5, 500);
+
+  margin-bottom: 32px;
+  color: $first-color;
+}
+
+.contacts__text .contacts__info {
+  @include text(16px, 1.5, 400);
+
+  position: relative;
+  margin-bottom: 21px;
+  padding-left: 27px;
+
+  color: $first-color;
+}
+
+.contacts__info--adress::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 22px;
+  background: url("../../img/icon-point.svg");
+  background-repeat: no-repeat;
+}
+
+.contacts__info--phone::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  background: url("../../img/icon-phone.svg");
+  background-repeat: no-repeat;
+}
+
+.contacts__info--adress br {
+  display: none;
+}
+
+.contacts__wrapper-img {
+  width: 49%;
+}
+
+@media (max-width: $tablet-width-max) {
+  .contacts__wrapper {
+    padding: 100px 0;
+    padding-bottom: 93px;
+  }
+
+  .contacts__text {
+    width: 48%;
+  }
+
+  .contacts__text .contacts__text-question {
+    margin-bottom: 26px;
+  }
+
+  .contacts__info--adress::before {
+    top: 3px;
+    left: 1px;
+  }
+
+  .contacts__info--phone::before {
+    top: -2px;
+    left: 0;
+  }
+
+  .contacts__info--adress br {
+    display: block;
+  }
+
+  .contacts__wrapper-img {
+    width: 48%;
+  }
+}
+
+@media (max-width: $mobile-width-max) {
+  .contacts__wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 63px 0 58px 0;
+  }
+
+  .contacts__text {
+    width: 98%;
+    order: 1;
+    margin-bottom: 38px;
+  }
+
+  .contacts__info--adress::before {
+    top: 7px;
+    left: 0;
+  }
+
+  .contacts__info--phone::before {
+    top: 1px;
+    left: 0;
+  }
+
+  .contacts__wrapper-img {
+    width: 100%;
+    order: 2;
+  }
+
+  .contacts__img {
+    width: 100%;
+    height: auto;
+  }
+}
