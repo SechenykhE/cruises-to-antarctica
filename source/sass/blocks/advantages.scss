@@ -1,6 +1,5 @@
 .advantages {
   position: relative;
-  min-height: 562px;
   z-index: 1;
 
   width: 100%;
@@ -28,6 +27,11 @@
   }
 }
 
+.advantages__inner {
+  padding-top: 110px;
+  padding-bottom: 80px;
+}
+
 .advantages__wrapper {
   position: relative;
   z-index: 2;
@@ -35,8 +39,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  padding: 110px 0 80px 0;
 }
 
 .advantages__wrapper h2 {
@@ -50,13 +52,14 @@
   @include list-reset;
   display: flex;
   flex-wrap: wrap;
+
+  max-width: 100%;
 }
 
 .advantages__item {
   position: relative;
 
   width: 31%;
-  min-height: 241px;
   padding-top: 81px;
   padding-right: 30px;
   padding-bottom: 26px;
@@ -72,7 +75,7 @@
 
   &--ship::before,
   &--ticks::before,
-  &--boat::before, {
+  &--boat::before {
     position: absolute;
     content: "";
 
@@ -124,8 +127,6 @@
 
 @media (max-width: $tablet-width-max) {
   .advantages {
-    min-height: 588px;
-
     background-image: url("../../img/advantages-img-tablet@1x.jpg");
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -133,8 +134,9 @@
     }
   }
 
-  .advantages__wrapper {
-    padding: 91px 0 60px 0;
+  .advantages__inner {
+    padding-top: 91px;
+    padding-bottom: 60px;
   }
 
   .advantages__wrapper h2 {
@@ -145,7 +147,6 @@
 
   .advantages__item {
     width: 30.3%;
-    min-height: 310px;
     padding-top: 70px;
     padding-right: 15px;
     padding-bottom: 23px;
@@ -192,8 +193,6 @@
 
 @media (max-width: $mobile-width-max) {
   .advantages {
-    min-height: 997px;
-
     background-image: url("../../img/advantages-img-mobile@1x.jpg");
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -201,8 +200,9 @@
     }
   }
 
-  .advantages__wrapper {
-    padding: 58px 0 36px 0;
+  .advantages__inner {
+    padding-top: 58px;
+    padding-bottom: 36px;
   }
 
   .advantages__wrapper h2 {
@@ -217,7 +217,6 @@
 
   .advantages__item {
     width: 100%;
-    min-height: 249px;
     padding-top: 70px;
     padding-right: 15px;
     padding-bottom: 21px;

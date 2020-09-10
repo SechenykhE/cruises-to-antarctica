@@ -16,6 +16,10 @@
   margin-bottom: 49px;
 }
 
+.cruises__list {
+  max-width: 100%;
+}
+
 @media (max-width: $tablet-width-max) {
   .cruises {
     padding-top: 90px;

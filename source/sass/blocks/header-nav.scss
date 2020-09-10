@@ -82,14 +82,9 @@
     background-color: $background-color;
   }
 
-  .header-nav--opened .header__logo--light,
-  .header-nav--nojs .header__logo--light {
-    display: none;
-  }
-
-  .header-nav--opened .header__logo--dark,
-  .header-nav--nojs .header__logo--dark {
-    display: block;
+  .header-nav--opened path,
+  .header-nav--nojs path {
+    fill: $first-color;
   }
 
   .header-nav--opened + .header__main::after,

@@ -1,11 +1,12 @@
+.contacts {
+  padding-top: 120px;
+  padding-bottom: 113px;
+}
+
 .contacts__wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  min-height: 142px;
-  padding-top: 120px;
-  padding-bottom: 113px;
 }
 
 .contacts__text {
@@ -15,16 +16,14 @@
 
 .contacts__text p {
   @include reset;
-}
-
-.contacts__text .contacts__text-question {
   @include text(18px, 1.5, 500);
 
   margin-bottom: 32px;
   color: $first-color;
 }
 
-.contacts__text .contacts__info {
+.contacts__info p,
+.contacts__info a {
   @include text(16px, 1.5, 400);
 
   position: relative;
@@ -34,7 +33,7 @@
   color: $first-color;
 }
 
-.contacts__info--adress::before {
+.contacts__info p::before {
   position: absolute;
   content: "";
   top: 0;
@@ -45,7 +44,20 @@
   background-repeat: no-repeat;
 }
 
-.contacts__info--phone::before {
+.contacts__info a {
+  @include animation;
+
+  &:hover,
+  &:focus {
+    color: $first-color-hover;
+  }
+
+  &:active {
+    color: $first-color-active;
+  }
+}
+
+.contacts__info a::before {
   position: absolute;
   content: "";
   top: 0;
@@ -56,7 +68,7 @@
   background-repeat: no-repeat;
 }
 
-.contacts__info--adress br {
+.contacts__info br {
   display: none;
 }
 
@@ -65,8 +77,8 @@
 }
 
 @media (max-width: $tablet-width-max) {
-  .contacts__wrapper {
-    padding: 100px 0;
+  .contacts {
+    padding-top: 100px;
     padding-bottom: 93px;
   }
 
@@ -74,21 +86,21 @@
     width: 48%;
   }
 
-  .contacts__text .contacts__text-question {
+  .contacts__text p {
     margin-bottom: 26px;
   }
 
-  .contacts__info--adress::before {
-    top: 3px;
+  .contacts__info p::before {
+    top: 7px;
     left: 1px;
   }
 
-  .contacts__info--phone::before {
+  .contacts__info a::before {
     top: -2px;
     left: 0;
   }
 
-  .contacts__info--adress br {
+  .contacts__info br {
     display: block;
   }
 
@@ -98,10 +110,14 @@
 }
 
 @media (max-width: $mobile-width-max) {
+  .contacts {
+    padding-top: 63px;
+    padding-bottom: 59px;
+  }
+
   .contacts__wrapper {
     flex-direction: column;
     align-items: flex-start;
-    padding: 63px 0 58px 0;
   }
 
   .contacts__text {
@@ -110,12 +126,16 @@
     margin-bottom: 38px;
   }
 
-  .contacts__info--adress::before {
+  .contacts__info p {
+    margin-bottom: 21px;
+  }
+
+  .contacts__info p::before {
     top: 7px;
     left: 0;
   }
 
-  .contacts__info--phone::before {
+  .contacts__info a::before {
     top: 1px;
     left: 0;
   }
@@ -125,7 +145,7 @@
     order: 2;
   }
 
-  .contacts__img {
+  .contacts__wrapper-img img {
     width: 100%;
     height: auto;
   }
