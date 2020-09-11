@@ -82,15 +82,24 @@
             <h2>Преимущества</h2>
             <ul class="advantages__list">
               <li class="advantages__item advantages__item--ship">
+                <svg width="27" height="32">
+                  <use xlink:href="img/sprite_auto.svg#icon-ship"></use>
+                </svg>
                 <h3>Небольшой круизный лайнер</h3>
                 <p>Круизный лайнер, рассчитанный всего лишь на 300 гостей, поможет избежать шума и очередей и даст
                   возможность насладиться видами и природой.</p>
               </li>
               <li class="advantages__item advantages__item--ticks">
+                <svg width="38" height="21">
+                  <use xlink:href="img/sprite_auto.svg#icon-ticks"></use>
+                </svg>
                 <h3>Система все включено</h3>
                 <p>Все наши круизы работают по системе “Все Включено”. Великолепные блюда и безлимитный бар доступны для вас 24 часа.</p>
               </li>
               <li class="advantages__item advantages__item--boat">
+                <svg width="42" height="15">
+                  <use xlink:href="img/sprite_auto.svg#icon-boat"></use>
+                </svg>
                 <h3>Экскурсионные туры на Zodiac</h3>
                 <p>Экскурсионные туры к берегам Антарктиды совершаются на оборудованных лодках типа Zodiac в сопровождении
                   опытных экскурсоводов.</p>
@@ -362,7 +371,7 @@
       </section>
 
       <section class="booking">
-        <div class="bookin__inner container ">
+        <div class="booking__inner container ">
           <div class="booking__wrapper">
             <div class="booking__text">
               <h2>Раннее бронирование</h2>
@@ -370,11 +379,11 @@
             </div>
             <form class="booking__form" action="https://echo.htmlacademy.ru" method="get">
               <p>Оставьте заявку и мы свяжемся с вами в ближайшее время</p>
-              <input id="name" type="text" placeholder="Валерия">
+              <input id="name" type="text" name="user-name" placeholder="Валерия" required="">
               <label class="visually-hidden" for="name">Ваше имя</label>
-              <input id="phone" type="tel" placeholder="89236889975">
+              <input id="phone" type="tel" name="user-phone" pattern="[0-9]{7,11}" placeholder="89236889975" required="">
               <label class="visually-hidden" for="phone">Ваш номер телефона</label>
-              <input id="mail" type="email" placeholder="grishaewa.lera@gmail.com">
+              <input id="mail" type="email" name="user-email" placeholder="grishaewa.lera@gmail.com" required="">
               <label class="visually-hidden" for="mail">Ваша электронная почта</label>
 
               <div class="booking__check">
@@ -406,8 +415,18 @@
           <div class="contacts__text">
             <p>У вас ещё остались вопросы или сомнения? Приезжайте к нам в офис и мы вам все расскажем.</p>
             <div class="contacts__info">
-              <p>г. Санкт Петербург, <br> ул. Большая Конюшенная, 19/8</p>
-              <a href="tel:88002000000">8-800-200-00-00</a>
+              <div class="contacts__info-wrapper contacts__info-wrapper--point">
+                <svg width="18" height="22">
+                  <use xlink:href="img/sprite_auto.svg#icon-point"></use>
+                </svg>
+                <p>г. Санкт Петербург, <br> ул. Большая Конюшенная, 19/8</p>
+              </div>
+              <div class="contacts__info-wrapper">
+                <svg width="18" height="18">
+                  <use xlink:href="img/sprite_auto.svg#icon-phone"></use>
+                </svg>
+                <a href="tel:88002000000">8-800-200-00-00</a>
+              </div>
             </div>
           </div>
         </div>

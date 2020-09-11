@@ -71,7 +71,6 @@
 
   .header-nav--opened,
   .header-nav--nojs {
-    margin-top: -20px;
     margin-right: -5.1%;
     margin-left: -7.5%;
     padding-top: 20px;
@@ -80,6 +79,11 @@
     overflow: hidden;
 
     background-color: $background-color;
+  }
+
+  .header-nav--opened {
+    justify-content: flex-start;
+    height: 100vh;
   }
 
   .header-nav--opened path,

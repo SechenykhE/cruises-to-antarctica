@@ -11,7 +11,7 @@
 
 .contacts__text {
   width: 43%;
-  margin-top: -6px;
+  margin-top: 14px;
 }
 
 .contacts__text p {
@@ -26,22 +26,18 @@
 .contacts__info a {
   @include text(16px, 1.5, 400);
 
-  position: relative;
   margin-bottom: 21px;
-  padding-left: 27px;
+  padding-left: 10px;
 
   color: $first-color;
 }
 
-.contacts__info p::before {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  width: 18px;
-  height: 22px;
-  background: url("../../img/icon-point.svg");
-  background-repeat: no-repeat;
+.contacts__info-wrapper {
+  display: flex;
+}
+
+.contacts__info-wrapper svg {
+  flex-shrink: 0;
 }
 
 .contacts__info a {
@@ -55,17 +51,6 @@
   &:active {
     color: $first-color-active;
   }
-}
-
-.contacts__info a::before {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  width: 18px;
-  height: 18px;
-  background: url("../../img/icon-phone.svg");
-  background-repeat: no-repeat;
 }
 
 .contacts__info br {
@@ -90,14 +75,8 @@
     margin-bottom: 26px;
   }
 
-  .contacts__info p::before {
-    top: 7px;
-    left: 1px;
-  }
-
-  .contacts__info a::before {
-    top: -2px;
-    left: 0;
+  .contacts__info-wrapper--point svg {
+    margin-top: 5px;
   }
 
   .contacts__info br {
@@ -111,7 +90,7 @@
 
 @media (max-width: $mobile-width-max) {
   .contacts {
-    padding-top: 63px;
+    padding-top: 43px;
     padding-bottom: 59px;
   }
 
@@ -123,7 +102,7 @@
   .contacts__text {
     width: 98%;
     order: 1;
-    margin-bottom: 38px;
+    margin-bottom: 17px;
   }
 
   .contacts__info p {
