@@ -71,17 +71,22 @@
 
   .header-nav--opened,
   .header-nav--nojs {
-    margin-right: -5.1%;
-    margin-left: -7.5%;
+    margin-right: -6.3%;
+    margin-left: -6.3%;
     padding-top: 20px;
-    padding-right: 5%;
-    padding-left: 7.5%;
+    padding-right: 6.3%;
+    padding-left: 6.3%;
     overflow: hidden;
 
     background-color: $background-color;
   }
 
   .header-nav--opened {
+    position: fixed;
+    top: 0;
+    left: 6.3%;
+    z-index: 200;
+    width: 100%;
     justify-content: flex-start;
     height: 100vh;
   }
